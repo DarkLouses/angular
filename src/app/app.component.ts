@@ -6,7 +6,7 @@ import { Product } from './models/product.model';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
-})
+}) 
 
 export class AppComponent {
   title:string = 'gabriel';
@@ -16,7 +16,7 @@ export class AppComponent {
   changeTitle():void {
     this.title = 'changed';
   }
-
+  
   ngOnInit() {
     this.Http.get<Product[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((data) => {
@@ -24,5 +24,7 @@ export class AppComponent {
       }); 
   }
 }
+
+
 
 

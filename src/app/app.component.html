@@ -7,10 +7,17 @@
 </head>
 <body>
 
-    <h1><span>{{ title }} app is running!</span></h1>
-    <button (click)="changeTitle()">change</button>
+  <h1><span>{{ title }} app is running!</span></h1>
+  <button (click)="changeTitle()">change</button>
 
-    <app-product *ngFor="let product of ProductList" [product]="product"></app-product>
+  <nav>
+    <ul>
+      <li><a routerLink="/products">Producto</a></li>
+      <li><a routerLink="/contact">contacto</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
   
 </body>
 </html>
